@@ -1,0 +1,22 @@
+# Source: jx3-springboot-demo/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'jx3-springboot-demo'
+  name: jx3-springboot-demo
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - pathType: ImplementationSpecific
+            backend:
+              service:
+                name: jx3-springboot-demo
+                port:
+                  number: 80
+      host: jx3-springboot-demo-jx-staging.18.170.12.85.nip.io
