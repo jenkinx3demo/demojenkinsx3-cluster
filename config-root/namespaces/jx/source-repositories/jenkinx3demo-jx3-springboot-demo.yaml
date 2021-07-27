@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: jenkinx3demo
+    provider: github
+    repository: jx3-springboot-demo
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: jenkinx3demo-jx3-springboot-demo
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/jenkinx3demo/jx3-springboot-demo.git
+  org: jenkinx3demo
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx3-springboot-demo
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/jenkinx3demo/jx3-springboot-demo
