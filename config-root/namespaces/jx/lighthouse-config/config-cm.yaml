@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - jenkinx3demo/demojenkinsx3-cluster
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.18.170.12.85.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
